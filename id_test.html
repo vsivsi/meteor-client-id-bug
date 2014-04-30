@@ -1,0 +1,31 @@
+<head>
+  <title>id_test</title>
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <h1>Hello World!</h1>
+  {{greeting}}
+  <input type="button" value="Create a document" />
+
+  <table>
+  	<thead>
+  		<tr>
+            <th>Server _id</th>
+            <th>Client _id</th>
+        </tr>
+  	</thead>
+    <tbody>
+        {{#each docs}}
+            <tr>
+                <td>{{_id}}</td>
+                <td>{{insert_id}}</td>
+            </tr>
+        {{/each}}
+    </tbody>
+  </table>
+
+</template>
